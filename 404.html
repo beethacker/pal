@@ -5,7 +5,8 @@
 
             </p>
         <script>
-            var path = window.location.pathname.slice(1);
+             /* Gotta slice off "/pal/" */
+            var path = window.location.pathname.slice(5);
             if (!path.endsWith(".json")) {
                 localStorage.setItem('404_hack', path);
                 window.location.href='https://beethacker.github.io/pal';

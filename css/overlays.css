@@ -1,0 +1,73 @@
+#board.portrait .labelAA {
+   bottom: -40px;
+   left: 25%;
+   /* top: 35%; */
+   /* left: 20%; */
+}
+
+#board.portrait .labelBB {
+  top: -60px;
+  right: 20px;
+  /* top: 25%; */
+  /* left: 25%; */
+}
+
+#board.landscape .labelAA {
+    left: 90%;
+    bottom: 10%;
+}
+
+#board.landscape .labelBB {
+    left: -17%;
+}
+
+#board.portrait .labelA {
+    opacity: 30%;
+    left: -45px;
+}
+
+#board.portrait .labelB {
+    opacity: 30%;
+    right: -45px;
+}
+
+#board.landscape .labelA {
+    opacity: 30%;
+    bottom: -15%;
+    right: 5%;
+}
+
+#board.landscape .labelB {
+    opacity: 30%;
+    top: -15%;
+    left: -15%;
+}
+
+
+#board-container.portrait #namePlayer {
+  bottom: -5%;
+  pointer-events: none;
+}
+
+#board-container.portrait #nameOpp {
+  top: -6%;
+  right: 0px;
+  pointer-events: none;
+}
+
+#board-container.landscape #namePlayer {
+  right: 5%;
+  pointer-events: none;
+}
+
+#board-container.landscape #nameOpp {
+  top: -12%;
+  left: 0px;
+  pointer-events: none;
+}
+.label.active {
+  border-color: green;
+  border-width: 4px;
+  background-color: greenyellow;
+  opacity: 100;
+}

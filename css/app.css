@@ -1,0 +1,167 @@
+#board {
+  background: #944;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  padding: 0px;
+  
+  display: grid;
+  grid-gap: 1fr 1fr;
+}
+
+#board.portrait {
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-areas: 
+    "A0 x1 B6"
+    "A1 BB B5"
+    "A2 BB B4"
+    "A3 hh B3"
+    "A4 AA B2"
+    "A5 AA B1"
+    "A6 x3 B0";
+}
+
+#board.landscape {
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr 1.5fr 1fr;
+  grid-template-areas: 
+    "B6 B5 B4 B3 B2 B1 B0"
+    "x1 BB BB hh AA AA x3"
+    "A0 A1 A2 A3 A4 A5 A6"
+}
+
+body {
+  background: #888888;
+  color: pink;
+  font-size: xx-large;
+}
+
+#board-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.label {
+  color: rgb(179, 26, 94);
+  padding: 2px 20px 2px 20px;
+  background-color: black;
+  border-color: rgb(179, 26, 94);
+  border-width: 2px;
+  border-style: solid;
+  opacity: 50%;
+  border-radius: 15px;
+  position: absolute;
+  z-index: 4;
+}
+
+#status {
+  color: white;
+  /* background-color: indigo; */
+  display: block;
+  background-color: mediumslateblue;
+  width: 100%;
+  height: 60px;
+  font-size: medium;
+  text-align: center;
+  font-size: 40px;
+}
+
+#link {
+  /* background-color: gray; */
+  color: goldenrod;
+  align-content: center;
+  width: 50%;
+}
+
+#status.postMove {
+  background-color: purple;
+}
+
+#status.currentPlayerTurn {
+  background-color: mediumaquamarine;
+}
+
+.btn {
+  /* background-color: transparent; */
+  color: pink;
+  font-weight: bold;
+
+  padding: 6px 20px 6px 20px;
+  margin: 5px;
+  background-color: #888;
+  border-color: pink;
+  border-width: 2px;
+  border-style: solid;
+  opacity: 100%;
+  border-radius: 15px;
+  z-index: 4;
+}
+
+.btn:hover {
+  border-color: green;
+  color: black;
+  background-color: greenyellow;
+  opacity: 100;
+}
+
+#copyPopup {
+  background-color: mediumseagreen;
+  color: black;
+  position: relative;
+  left: 50%; 
+  width: 200px;
+  /* top: 10px; */
+
+  font-size: 20px;
+  opacity: 0%;
+  z-index: 2;
+
+  animation-name: fadeOut;
+  animation-duration: 4s;    
+
+  padding: 20px;
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+#copyPopup.hidden {
+  animation-name: null;
+  top: -200%;
+}
+
+@keyframes fadeOut {
+    0% {opacity: 100%;  }
+    100% { opacity: 0%; }
+}
+
+.setup {
+  margin: 5%;
+  background-color: #333;
+  padding: 5%;
+  padding-bottom: 10%;
+}
+
+/* NAV */
+/*
+.navbtn-disabled {
+  color: lightgrey;
+}
+
+.navbtn-disabled:hover,
+.navbtn-disabled:focus {
+  border: none;
+}
+*/
+
+#info {
+  background-color: black;
+  opacity: 80%;
+  margin: 20px;
+  padding: 20px;
+}
+
+#info p {
+  font-size: smaller;
+}

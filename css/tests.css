@@ -1,0 +1,37 @@
+
+
+#tests {
+  position: relative;
+  font-size: large;
+  border: greenyellow solid 1px;
+  max-width: 1400px;
+  padding: 60px;
+  margin: 2%;
+  border-radius: 5%;
+  background: #00000066;
+}
+
+.testCase.success {
+    color: rgb(129, 224, 129);
+}
+
+.testCase.failure {
+    color: red;
+}
+
+.testCase {
+    clear: both;
+}
+
+.details {
+    margin-left: 20px;
+}
+
+.expected {
+    float: left;
+    background: indigo;
+}
+
+.actual {
+    float: right;
+}
